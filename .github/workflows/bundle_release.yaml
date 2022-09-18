@@ -21,6 +21,7 @@ jobs:
             ~/.gradle/caches
             ~/.gradle/wrapper
             ~/.konan
+          key: gradle-konan-cache
 
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
