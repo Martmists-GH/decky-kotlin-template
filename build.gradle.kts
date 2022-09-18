@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "com.martmists"
-version = "0.0.1"
+version = "0.0.2"
 val production: String? by project
 val isDevelopment = production != "true"
 
@@ -130,12 +130,16 @@ tasks {
     }
 
     val bundle by creating(Copy::class) {
+        val backendMain by kotlin.sourceSets.getting
+        val frontendMain by kotlin.sourceSets.getting
+
         dependsOn(webpackTask, named("backendBinaries"))
 
         destinationDir = file("${buildDir}/bundle")
 
         into(project.name) {
             from(
+                backendMain.resources,
                 python.resources,
                 buildPython,
                 "README.md",
@@ -150,6 +154,10 @@ tasks {
                 }
             }
             into("dist") {
+                into("assets") {
+                    from(frontendMain.resources)
+                }
+
                 from(webpackTask.destinationDirectory) {
                     filter {
                         it.replace("module.exports = __webpack_exports__.definePlugin;", "return __webpack_exports__.definePlugin;")
