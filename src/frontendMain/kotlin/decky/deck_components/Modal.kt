@@ -2,6 +2,7 @@
 @file:JsModule("decky-frontend-lib")
 package decky.deck_components
 
+import csstype.ClassName
 import org.w3c.dom.events.EventTarget
 import react.FC
 import react.Props
@@ -14,27 +15,13 @@ external interface ModalRootProps : Props {
     var closeModal: (() -> Unit)?
     var onOK: (() -> Unit)?
     var onEscKeypress: (() -> Unit)?
-    var className: String?
-        get() = definedExternally
-        set(value) = definedExternally
+    var className: ClassName?
     var modalClassName: String?
-        get() = definedExternally
-        set(value) = definedExternally
     var bAllowFullSize: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
     var bDestructiveWarning: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
     var bDisableBackgroundDismiss: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
     var bHideCloseIcon: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
     var bOKDisabled: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
 }
 
 external interface ConfirmModalProps : ModalRootProps {

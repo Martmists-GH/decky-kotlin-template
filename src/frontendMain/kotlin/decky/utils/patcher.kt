@@ -7,8 +7,6 @@ external var callOriginal: Any
 
 external interface PatchOptions {
     var singleShot: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
 }
 
 external interface Patch {

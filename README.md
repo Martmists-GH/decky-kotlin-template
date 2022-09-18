@@ -2,6 +2,7 @@
 
 A template for [Steam Deck Plugin Loader](https://github.com/SteamDeckHomebrew/decky-loader) plugins in Kotlin/Multiplatform.
 Any problems, bugs or feature requests can be reported [on the issue tracker](https://youtrack.martmists.com/issues/DK).
+Latest compatible `decky-frontend-lib`: [1.3.1 @ 0d248f39](https://github.com/SteamDeckHomebrew/decky-frontend-lib/commit/0d248f3987ee498c0cb55a4db1f099edf8288de3)
 
 ### Details
 

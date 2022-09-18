@@ -7,8 +7,6 @@ import react.FC
 external interface ToggleFieldProps : ItemProps {
     var checked: Boolean
     var disabled: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
     var onChange: ((checked: Boolean) -> Unit)?
 }
 

@@ -8,11 +8,7 @@ import react.dom.html.ImgHTMLAttributes
 
 external interface SuspensefulImageProps : ImgHTMLAttributes<HTMLImageElement> {
     var suspenseWidth: dynamic /* String? | Number? */
-        get() = definedExternally
-        set(value) = definedExternally
     var suspenseHeight: dynamic /* String? | Number? */
-        get() = definedExternally
-        set(value) = definedExternally
 }
 
 external var SuspensefulImage: FC<SuspensefulImageProps>

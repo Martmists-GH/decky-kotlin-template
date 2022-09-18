@@ -2,44 +2,27 @@
 @file:JsModule("decky-frontend-lib")
 package decky.deck_components
 
+import csstype.ClassName
 import org.w3c.dom.HTMLDivElement
 import react.FC
+import react.ReactNode
 import react.dom.html.HTMLAttributes
 
 external interface FieldProps : HTMLAttributes<HTMLDivElement>, FooterLegendProps {
-    var label: dynamic /* String? | ReactNode? */
-        get() = definedExternally
-        set(value) = definedExternally
-    var bottomSeparator: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
-    var description: dynamic /* String? | ReactNode? */
-        get() = definedExternally
-        set(value) = definedExternally
+    var label: ReactNode
+    var bottomSeparator: String? /* "standard" | "thick" | "none" */
+    var description: ReactNode
     var disabled: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
-    var icon: Any?
-        get() = definedExternally
-        set(value) = definedExternally
-    var childrenLayout: String?
-        get() = definedExternally
-        set(value) = definedExternally
-    var childrenContainerWidth: String?
-        get() = definedExternally
-        set(value) = definedExternally
-    var padding: String?
-        get() = definedExternally
-        set(value) = definedExternally
+    var icon: ReactNode
+    var inlineWrap: String? /* "keep-inline" | "shift-children-below" */
+    var childrenLayout: String? /* "below" | "inline" */
+    var childrenContainerWidth: String? /* "min" | "max" | "fixed" */
+    var spacingBetweenLabelAndChild: String? /* "none" */
+    var padding: String? /* "none" | "standard" | "compact" */
+    override var className: ClassName?
     var highlightOnFocus: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
     var indentLevel: Number?
-        get() = definedExternally
-        set(value) = definedExternally
-    var verticalAlignment: String?
-        get() = definedExternally
-        set(value) = definedExternally
+    var verticalAlignment: String? /* "center" | "none" */
 }
 
 external var Field: FC<FieldProps /* FieldProps & RefAttributes<HTMLDivElement> */>

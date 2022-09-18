@@ -21,11 +21,7 @@ external fun getReactInstance(o: Node): Any
 
 external interface findInTreeOpts {
     var walkable: Array<String>?
-        get() = definedExternally
-        set(value) = definedExternally
     var ignore: Array<String>?
-        get() = definedExternally
-        set(value) = definedExternally
 }
 
 external var findInTree: (parent: Any, filter: findInTreeFilter, opts: findInTreeOpts) -> Any

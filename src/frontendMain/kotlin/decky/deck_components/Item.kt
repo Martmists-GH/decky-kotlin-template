@@ -3,27 +3,14 @@
 package decky.deck_components
 
 import react.Props
+import react.ReactNode
 
 external interface ItemProps : Props {
     var label: String?
-        get() = definedExternally
-        set(value) = definedExternally
     var description: String?
-        get() = definedExternally
-        set(value) = definedExternally
     var layout: String? /* "below" | "inline" */
-        get() = definedExternally
-        set(value) = definedExternally
-    var icon: Any?
-        get() = definedExternally
-        set(value) = definedExternally
-    var bottomSeparator: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
+    var icon: ReactNode
+    var bottomSeparator: String? /* "standard" | "thick" | "none" */
     var indentLevel: Number?
-        get() = definedExternally
-        set(value) = definedExternally
     var tooltip: String?
-        get() = definedExternally
-        set(value) = definedExternally
 }

@@ -4,24 +4,19 @@ package decky.deck_components
 
 import react.FC
 import react.Props
+import react.ReactNode
 
 external interface SidebarNavigationPages {
     var title: String
     var route: String
-    var content: Any
+    var content: ReactNode
 }
 
 external interface SidebarNavigationProps : Props {
     var title: String?
-        get() = definedExternally
-        set(value) = definedExternally
     var pages: Array<SidebarNavigationPages>
     var showTitle: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
     var disableRouteReporting: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
 }
 
 external var SidebarNavigation: FC<SidebarNavigationProps>

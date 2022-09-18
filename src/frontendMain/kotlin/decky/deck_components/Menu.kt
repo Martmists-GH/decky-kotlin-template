@@ -13,8 +13,6 @@ external interface MenuProps : Props {
     var label: String
     var onCancel: (() -> Unit)?
     var cancelText: String?
-        get() = definedExternally
-        set(value) = definedExternally
 }
 
 external var Menu: FC<MenuProps>

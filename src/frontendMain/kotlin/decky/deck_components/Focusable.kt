@@ -13,19 +13,10 @@ external interface FocusableProps : HTMLAttributes<HTMLDivElement>, FooterLegend
     operator fun get(key: String): String?
     @nativeSetter
     operator fun set(key: String, value: String?)
-    override var children: ReactNode?
     var focusClassName: String?
-        get() = definedExternally
-        set(value) = definedExternally
     var focusWithinClassName: String?
-        get() = definedExternally
-        set(value) = definedExternally
     var onActivate: ((e: CustomEvent) -> Unit)?
-        get() = definedExternally
-        set(value) = definedExternally
     var onCancel: ((e: CustomEvent) -> Unit)?
-        get() = definedExternally
-        set(value) = definedExternally
 }
 
 external var Focusable: FC<FocusableProps /* FocusableProps & RefAttributes<HTMLDivElement> */>

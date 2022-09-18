@@ -8,8 +8,6 @@ import react.FC
 external interface ButtonItemProps : ItemProps {
     var onClick: ((e: MouseEvent) -> Unit)?
     var disabled: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
 }
 
 external var ButtonItem: FC<ButtonItemProps>

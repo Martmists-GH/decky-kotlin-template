@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "com.martmists"
-version = System.getenv("GIT_TAG") ?: "0.0.3"
+version = System.getenv("GIT_TAG") ?: "0.0.4"
 val production: String? by project
 val isDevelopment = production != "true"
 
@@ -48,7 +48,8 @@ kotlin {
     sourceSets {
         val frontendMain by getting {
             dependencies {
-                implementation(npm("decky-frontend-lib", "3.0.0"))
+                // React components
+                implementation(npm("decky-frontend-lib", "3.1.3"))
 
                 // Kotlin Wrappers
                 for (module in listOf(

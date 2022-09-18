@@ -7,11 +7,7 @@ import react.Props
 
 external interface PanelSectionProps : Props {
     var title: String?
-        get() = definedExternally
-        set(value) = definedExternally
     var spinner: Boolean?
-        get() = definedExternally
-        set(value) = definedExternally
 }
 
 external var PanelSection: FC<PanelSectionProps>
