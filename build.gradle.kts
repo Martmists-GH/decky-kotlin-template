@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "com.martmists"
-version = "0.0.2"
+version = System.getenv("GIT_TAG") ?: "0.0.3"
 val production: String? by project
 val isDevelopment = production != "true"
 

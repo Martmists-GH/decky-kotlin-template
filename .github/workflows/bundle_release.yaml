@@ -26,6 +26,8 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: build
+        env:
+          GIT_TAG: ${{ github.ref_name }}
 
       - uses: kittaakos/upload-artifact-as-is@v0
         with:
