@@ -15,6 +15,13 @@ jobs:
       - name: Install packages
         run: "pacman -S --noconfirm --needed jdk11-openjdk python python-setuptools"
 
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+            ~/.konan
+
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
         with:
