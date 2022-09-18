@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Install packages
-        run: "pacman -S jdk11-openjdk python python-setuptools"
+        run: "pacman -S --noconfirm --needed jdk11-openjdk python python-setuptools"
 
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
