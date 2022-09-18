@@ -1,0 +1,10 @@
+{
+  "name": "${project}",
+  "author": "John Doe",
+  "flags": ["debug"],
+  "publish": {
+    "tags": ["template"],
+    "description": "Decky example plugin.",
+    "image": "https://opengraph.githubassets.com/1/SteamDeckHomebrew/PluginLoader"
+  }
+}

@@ -1,0 +1,27 @@
+on:
+  push:
+    tags:
+      - '*'
+
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/steamdeckhomebrew/holo-base:latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install packages
+        run: "pacman -S jdk11-openjdk python python-setuptools"
+
+      - name: Build with Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: build
+
+      - uses: alexellis/upload-assets@0.2.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          asset_paths: '["build/bundled/*"]'
