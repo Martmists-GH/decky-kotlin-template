@@ -49,7 +49,7 @@ kotlin {
         val frontendMain by getting {
             dependencies {
                 // React components
-                implementation(npm("decky-frontend-lib", "3.1.4"))
+                implementation(npm("decky-frontend-lib", "3.2.0"))
 
                 // Kotlin Wrappers
                 for (module in listOf(

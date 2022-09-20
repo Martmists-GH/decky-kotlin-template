@@ -15,5 +15,4 @@ external interface ColorPickerModalProps : Props {
     var defaultA: Number?
 }
 
-@Deprecated("Not available yet as of decky-frontend-lib 3.1.4")
 external var ColorPickerModal: FC<ColorPickerModalProps>
