@@ -7,6 +7,7 @@ import org.w3c.fetch.Request
 import org.w3c.fetch.RequestInit
 import react.ComponentType
 import react.ReactElement
+import react.ReactNode
 import react.router.RouteProps
 import kotlin.js.Promise
 import kotlin.js.RegExp
@@ -38,11 +39,11 @@ external interface RouterHook {
 }
 
 external interface ToastData {
-    var title: Any
-    var body: Any
+    var title: ReactNode
+    var body: ReactNode
     var onClick: (() -> Unit)?
-    var logo: Any?
-    var icon: Any?
+    var logo: ReactNode?
+    var icon: ReactNode?
     var className: ClassName?
     var contentClassName: String?
     var duration: Number?

@@ -13,3 +13,5 @@ external var quickAccessControlsClasses: QuickAccessControlsClasses
 external var updaterFieldClasses: UpdaterFieldClasses
 
 external var playSectionClasses: PlaySectionClasses
+
+external var gamepadSliderClasses: GamepadSliderClasses

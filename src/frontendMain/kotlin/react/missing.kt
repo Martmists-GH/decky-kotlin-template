@@ -3,4 +3,4 @@
 
 package react
 
-external interface RefAttributes<T> : Props
+external interface RefAttributes<T : Any> : PropsWithRef<T>

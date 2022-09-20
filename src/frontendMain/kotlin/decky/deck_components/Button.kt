@@ -9,6 +9,7 @@ import react.CSSProperties
 import react.FC
 import react.RefAttributes
 
+
 external interface DialogButtonProps : RefAttributes<HTMLDivElement> {
     var label: String?
     var style: CSSProperties?

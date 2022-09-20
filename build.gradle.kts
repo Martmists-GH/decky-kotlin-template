@@ -49,7 +49,7 @@ kotlin {
         val frontendMain by getting {
             dependencies {
                 // React components
-                implementation(npm("decky-frontend-lib", "3.1.3"))
+                implementation(npm("decky-frontend-lib", "3.1.4"))
 
                 // Kotlin Wrappers
                 for (module in listOf(
@@ -130,6 +130,13 @@ tasks {
         args("-m", "pip", "install", "--use-pep517", "-e", "src/pythonMain/resources")
     }
 
+    val pythonPackages by creating(Exec::class) {
+        executable = "python3.10"
+        args("-m", "pip", "install", "-r", "src/pythonMain/resources/requirements.txt", "-t", "${buildDir}/python-packages")
+
+        outputs.dir("${buildDir}/python-packages")
+    }
+
     val bundle by creating(Copy::class) {
         val backendMain by kotlin.sourceSets.getting
         val frontendMain by kotlin.sourceSets.getting
@@ -143,6 +150,7 @@ tasks {
                 backendMain.resources,
                 python.resources,
                 buildPython,
+                pythonPackages,
                 "README.md",
                 "LICENSE",
             )

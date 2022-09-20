@@ -7,7 +7,7 @@ import react.FC
 import react.Props
 import react.ReactNode
 
-external var showContextMenu: (children: ReactNode, parent: EventTarget) -> Unit
+external var showContextMenu: (children: ReactNode, parent: EventTarget?) -> Unit
 
 external interface MenuProps : Props {
     var label: String

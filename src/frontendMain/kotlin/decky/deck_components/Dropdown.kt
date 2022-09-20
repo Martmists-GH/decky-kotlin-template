@@ -10,12 +10,12 @@ external interface _DropdownOption
 
 external interface SingleDropdownOption : _DropdownOption {
     var data: Any
-    var label: ReactNode
+    var label: ReactNode?
     var options: Any?
 }
 
 external interface MultiDropdownOption : _DropdownOption {
-    var label: ReactNode
+    var label: ReactNode?
     var options: Array<_DropdownOption>
     var data: Any?
 }

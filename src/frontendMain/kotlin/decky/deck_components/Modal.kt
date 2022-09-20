@@ -8,7 +8,7 @@ import react.FC
 import react.Props
 import react.ReactNode
 
-external var showModal: (children: ReactNode, parent: EventTarget) -> Unit
+external var showModal: (children: ReactNode, parent: EventTarget?) -> Unit
 
 external interface ModalRootProps : Props {
     var onCancel: (() -> Unit)?

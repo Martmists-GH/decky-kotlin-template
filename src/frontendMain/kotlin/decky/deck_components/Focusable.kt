@@ -9,10 +9,8 @@ import react.ReactNode
 import react.dom.html.HTMLAttributes
 
 external interface FocusableProps : HTMLAttributes<HTMLDivElement>, FooterLegendProps {
-    @nativeGetter
-    operator fun get(key: String): String?
-    @nativeSetter
-    operator fun set(key: String, value: String?)
+    override var children: ReactNode?
+//    var `flow-children`: String?
     var focusClassName: String?
     var focusWithinClassName: String?
     var onActivate: ((e: CustomEvent) -> Unit)?

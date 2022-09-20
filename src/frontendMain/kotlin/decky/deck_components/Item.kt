@@ -9,7 +9,7 @@ external interface ItemProps : Props {
     var label: String?
     var description: String?
     var layout: String? /* "below" | "inline" */
-    var icon: ReactNode
+    var icon: ReactNode?
     var bottomSeparator: String? /* "standard" | "thick" | "none" */
     var indentLevel: Number?
     var tooltip: String?
